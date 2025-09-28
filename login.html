@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <h1>เข้าสู่ระบบ</h1>
+        <h3>มองเห็นทุกการเคลื่อนไหว ธุรกิจไม่สะดุด</h3>
+        <p class="green-text"><i class="fa fa-check-circle"></i> ทดลองใช้งานฟรี 6 เดือน</p>
+    </header>
+    <main>
+        <hr>
+        <section id="login">
+            <form action="#" method="post">
+                <div class="row">
+                    <div class="col-12">
+                        <label>บัญชีผู้ใช้ (Username)<span>*</span><br>
+                            <input type="text" id="username" name="username" required>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <label>รหัสผ่าน (Password)<span>*</span><br>
+                            <input type="password" id="password" name="password" required>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label>
+                            <input type="checkbox" id="show-password" name="show-password" onclick="showPassword()">
+                            แสดงรหัสผ่าน
+                        </label>
+                    </div>
+                    <div class="col-6 forgot-password">
+                        <a href="javascript:void(0)">ลืมรหัสผ่าน?</a>
+                    </div>
+                </div>
+                <button type="submit">เข้าสู่ระบบ</button>
+            </form>
+        </section>
+        <hr>
+        <section id="register" class="text-center">
+            <p>หากท่านยังไม่ได้เป็นสมาชิก</p>
+            <a href="register.html">กรุณาสมัครสมาชิก</a>
+        </section>
+    </main>
+    <script src="js/login.js"></script>
+</body>
+
+</html>

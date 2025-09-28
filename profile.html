@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="profile-header">ข้อมูลบริษัท</h1>
+        <br>
+    </header>
+    <main>
+        <section id="profile">
+            <form action="#" method="post">
+                <div class="row">
+                    <div class="col-6">
+                        <label>ชื่อสกุล/ชื่อบริษัท<span>*</span><br>
+                            <input type="text" id="name" name="name" required>
+                        </label>
+                    </div>
+                    <div class="col-6">
+                        <label>เลขบัตรประชาชน/เลขที่ผู้เสียภาษี<span>*</span><br>
+                            <input type="text" id="taxpayer-number" name="taxpayer-number" required>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <label>ที่อยู่เลขที่<span>*</span><br>
+                            <input type="text" id="address-no" name="address-no" required>
+                        </label>
+                    </div>
+                    <div class="col-3">
+                        <label>หมู่<br>
+                            <input type="text" id="village-no" name="village-no">
+                        </label>
+                    </div>
+                    <div class="col-6">
+                        <label>หมู่บ้าน/อาคาร<br>
+                            <input type="text" id="village" name="village">
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-6">
+                        <label>ซอย<br>
+                            <input type="text" id="alley" name="alley">
+                        </label>
+                    </div>
+                    <div class="col-6">
+                        <label>ถนน<span>*</span><br>
+                            <input type="text" id="road" name="road" required>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-6">
+                        <label>ตำบล/แขวง<span>*</span><br>
+                            <input type="text" id="subdistrict" name="subdistrict" required>
+                        </label>
+                    </div>
+                    <div class="col-6">
+                        <label>อำเภอ/เขต<span>*</span><br>
+                            <input type="text" id="district" name="district" required>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-6">
+                        <label>จังหวัด<span>*</span><br>
+                            <input type="text" id="province" name="province" required>
+                        </label>
+                    </div>
+                    <div class="col-6">
+                        <label>รหัสไปรษณีย์<span>*</span><br>
+                            <input type="text" id="zipcode" name="zipcode" required>
+                        </label>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script src="js/profile.js"></script>
+</body>
+
+</html>
