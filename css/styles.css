@@ -2,10 +2,10 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: Courier New, monospace;
 }
 
 html {
-  font-family: Courier New, monospace;
   max-width: 800px;
   margin: auto;
 }
@@ -13,7 +13,9 @@ html {
 body {
   line-height: 1.5;
   padding: 20px;
-  margin: 5px;
+  margin: 50px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
 }
 
 h5 {
@@ -34,10 +36,10 @@ hr {
   margin: 20px 0;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="tel"],
-input[type="email"],
+input[type='text'],
+input[type='password'],
+input[type='tel'],
+input[type='email'],
 select,
 button {
   padding: 10px;
@@ -46,7 +48,7 @@ button {
   width: 100%;
 }
 
-input[type="checkbox"] {
+input[type='checkbox'] {
   width: 20px;
   height: 20px;
   vertical-align: middle;
@@ -106,4 +108,31 @@ ul {
 
 .profile-header {
   color: blue;
+}
+
+.password-container {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 70%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+}
+
+.toggle-password::before {
+  font-family: FontAwesome;
+  content: '\f070';
+}
+
+.toggle-password.visible::before {
+  content: '\f06e';
+  color: black;
+}
+
+.valid {
+  color: green;
 }
