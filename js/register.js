@@ -74,7 +74,7 @@ password.addEventListener('keyup', () => {
   }
 })
 
-async function register(memberData) {
+const register = async (memberData) => {
   try {
     const response = await fetch('http://localhost:3000/members/register', {
       method: 'POST',
