@@ -17,7 +17,7 @@
     <main>
         <hr>
         <section id="register">
-            <form action="#" method="post">
+            <form id="register-form">
                 <div class="row">
                     <div class="col-12">
                         <label>บัญชีผู้ใช้ (Username)<span>*</span><br>
@@ -26,15 +26,21 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-12 password-container">
                         <label>รหัสผ่าน (Password)<span>*</span><br>
-                            <input type="password" id="password" name="password" required>
+                            <input type="password" id="password" name="password"
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" minlength="8" maxlength="20" required>
+                            <span class="toggle-password" id="toggle-password"></span>
                         </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
                         <ul>
-                            <li>มีตัวอักษรพิมพ์ใหญ่</li>
-                            <li>มีตัวอักษรพิมพ์เล็ก</li>
-                            <li>มีตัวเลข</li>
-                            <li>มีจำนวนตัวอักษรและตัวเลขรวมกัน 8-20 ตัวอักษร</li>
+                            <li id="capital">มีตัวอักษรพิมพ์ใหญ่</li>
+                            <li id="letter">มีตัวอักษรพิมพ์เล็ก</li>
+                            <li id="number">มีตัวเลข</li>
+                            <li id="length">มีจำนวนตัวอักษรและตัวเลขรวมกัน 8-20 ตัวอักษร</li>
                         </ul>
                     </div>
                 </div>
@@ -104,9 +110,17 @@
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col-6">
+                        <label>รหัสไปรษณีย์<span>*</span><br>
+                            <input type="text" id="zipcode" name="zipcode" pattern="[0-9]{5}" maxlength="5" required>
+                        </label>
+                        <br>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-4">
                         <label>คำนำหน้าผู้ติดต่อ<span>*</span><br>
-                            <select id="contact-prefix" name="contact-prefix" required>
+                            <select id="contact-title" name="contact-title" required>
                                 <option value="" disabled selected>---เลือก---</option>
                                 <option value="นาย">นาย</option>
                                 <option value="นาง">นาง</option>
@@ -128,17 +142,17 @@
                 <div class="row">
                     <div class="col-4">
                         <label>เบอร์โทรศัพท์<span>*</span><br>
-                            <input type="tel" id="phone-number" name="phone-number" required>
+                            <input type="tel" id="contact-phonenumber" name="contact-phonenumber" maxlength="11" required>
                         </label>
                     </div>
                     <div class="col-4">
                         <label>อีเมล<span>*</span><br>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="contact-email" name="contact-email" required>
                         </label>
                     </div>
                     <div class="col-4">
                         <label>โค้ดแนะนำ (REF)<br>
-                            <input type="text" id="referral-code" name="referral-code">
+                            <input type="text" id="contact-referral-code" name="contact-referral-code">
                         </label>
                     </div>
                 </div>
@@ -148,7 +162,7 @@
         <hr>
         <section id="login" class="text-center">
             <p>หากท่านเป็นสมาชิกอยู่แล้ว</p>
-            <a href="login.html">กรุณาเข้าสู่ระบบ</a>
+            <a href="index.html">กรุณาเข้าสู่ระบบ</a>
         </section>
     </main>
     <script src="js/register.js"></script>
