@@ -88,7 +88,7 @@ const register = async (memberData) => {
       throw new Error('Failed to fetch trivia questions');
     }
 
-    window.location.href = 'index.html';
+    window.location.href = 'login.html';
   } catch (error) {
     console.error('Error fetching data:', error);
   }
