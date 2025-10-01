@@ -14,6 +14,7 @@ const type = document.getElementById('type');
 const name = document.getElementById('name');
 const addressNo = document.getElementById('address-no');
 const villageNo = document.getElementById('village-no');
+const village = document.getElementById('village');
 const alley = document.getElementById('alley');
 const road = document.getElementById('road');
 const subDistrict = document.getElementById('subdistrict');
@@ -104,6 +105,7 @@ registerForm.addEventListener('submit', (e) => {
     name: name.value,
     addressNo: addressNo.value,
     villageNo: villageNo.value,
+    village: village.value,
     alley: alley.value,
     road: road.value,
     subdistrict: subDistrict.value,
