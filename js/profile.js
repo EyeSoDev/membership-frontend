@@ -18,7 +18,7 @@ const fetchProfileData = async () => {
 
     if (!response.ok) {
       alert('Failed to fetch profile data. Please log in again.');
-      window.location.href = '/index.html';
+      window.location.href = '/login.html';
       return;
     }
 
